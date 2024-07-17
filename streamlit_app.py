@@ -82,7 +82,7 @@ def main():
         status = solver.Solve()
 
         if status == pywraplp.Solver.OPTIMAL:
-            st.success(f"Solution found:")
+            st.success(f"Result:")
             for i in range(num_vars):
                 st.write(f"x{i+1} = {decision_vars[i].solution_value()}")
             st.write(f"Objective value = {solver.Objective().Value()}")
